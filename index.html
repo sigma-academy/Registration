@@ -1,81 +1,70 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sigma Career Academy | Admission Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0d6efd, #003366);
-            color: white;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<title>Sigma Career Academy - Registration Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .header {
-            padding: 30px 15px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffcc00;
+    text-align: center;
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+.header {
+    padding: 25px;
+}
 
-        .header p {
-            margin-top: 8px;
-            font-size: 18px;
-            opacity: 0.9;
-        }
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
 
-        .form-container {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            width: 95%;
-            max-width: 900px;
-            margin: auto;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-        }
+.form-container {
+    background: white;
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
 
-        iframe {
-            width: 100%;
-            height: 1000px;
-            border: none;
-            border-radius: 8px;
-        }
-
-        .footer {
-            margin: 25px 0;
-            font-size: 14px;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            iframe {
-                height: 1200px;
-            }
-        }
-    </style>
+iframe {
+    width: 100%;
+    height: 1000px;
+    border: none;
+    border-radius: 8px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>Sigma Career Academy</h1>
-        <p>Army / Police Bharti Admission Form</p>
-    </div>
+<div class="header">
+    <h1>Sigma Career Academy - Registration Form</h1>
+</div>
 
-    <div class="form-container">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeg8pLMAPaKthmFpfiaLA7vbuinA-GswbaEfwb4CEx90NdBqA/viewform?embedded=true">
-            Loading…
-        </iframe>
-    </div>
+<div class="form-container">
+    <iframe id="googleForm"
+    src="https://docs.google.com/forms/d/e/1FAIpQLSeg8pLMAPaKthmFpfiaLA7vbuinA-GswbaEfwb4CEx90NdBqA/viewform?embedded=true"
+    onload="redirectToWhatsApp()">
+    </iframe>
+</div>
 
-    <div class="footer">
-        © 2026 Sigma Career Academy | All Rights Reserved
-    </div>
+<script>
+var submitted = false;
+
+function redirectToWhatsApp() {
+    if(submitted) {
+        window.location.href = "https://wa.me/919850845094?text=I%20have%20successfully%20submitted%20the%20registration%20form.";
+    }
+    submitted = true;
+}
+</script>
 
 </body>
 </html>
